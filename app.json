@@ -1,16 +1,17 @@
 {
   "expo": {
-    "name": "simpleproject",
-    "slug": "simpleproject",
+    "name": "africaplus",
+    "slug": "africa-plus",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/africa.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/africa3.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
+      
     },
     "ios": {
       "supportsTablet": true

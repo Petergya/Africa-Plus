@@ -1,70 +1,47 @@
-import { Image, StyleSheet, Platform } from 'react-native';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+import React from "react";
+import { View, Text, ImageBackground, Image, TouchableOpacity } from "react-native";
+import { Button } from "react-native";
+import tw from "tailwind-react-native-classnames";
+
+const backgroundImage = require("../../assets/images/image2.jpg");
+const logoImage = require("../../assets/images/africa3.png");
+
+export default function App() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+    <View style={tw`flex-1`}>
+      <ImageBackground
+        source={backgroundImage}
+        style={tw`flex-1`}
+        imageStyle={tw`rounded-md`}
+        resizeMode="cover"
+      >
+        <View
+          style={tw`absolute top-0 left-0 right-0 bottom-0 bg-black opacity-70`}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+        <View style={tw`flex-1 justify-center items-center`}>
+          <Image
+            source={logoImage}
+            style={tw`w-41 h-40`}
+            resizeMode="contain"
+          />
+          <View style={tw`w-60 flex justify-center items-ceneter `}>
+            <Text style={tw`text-white text-sm text-center`}>
+              We'll help you create a new account in few easy steps.
+            </Text>
+          </View>
+
+          <View style={tw`gap-4 mt-4`}>
+            <TouchableOpacity style={tw`bg-yellow-900 py-3 px-4 rounded-full`}>
+              <Text style={tw`text-white  font-semibold px-20 `}>SIGNUP</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={tw`bg-yellow-600 py-3 px-4 rounded-full mt-2`}>
+              <Text style={tw`text-white  font-semibold px-20`}>LOGIN</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
