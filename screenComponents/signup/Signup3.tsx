@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function SignP1() {
+const Signup3 = () => {
   return (
     <View>
-      <Text>SignP1</Text>
+      <Text>Signup3</Text>
     </View>
   )
 }
+
+export default Signup3
