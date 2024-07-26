@@ -4,12 +4,14 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../../screenComponents/HomeScreen';
- import SignupP1 from '../../screenComponents/signup/SignUpp1';
- import SignupP2 from '../../screenComponents/signup/Signup2';
- import SignupP3 from '../../screenComponents/signup/Signup2';
- import SignupP4 from '../../screenComponents/signup/Signup2';
-  import Login from '../../screenComponents/login/Login'; 
-const Stack = createStackNavigator();
+import SignupP1 from '../../screenComponents/signup/SignUpp1';
+import SignupP2 from '../../screenComponents/signup/Signup2';
+import SignupP3 from '../../screenComponents/signup/Signup3';
+import SignupP4 from '../../screenComponents/signup/Signup4';
+import Login from '../../screenComponents/login/Login';
+import { RootStackParamList } from '../../types'; 
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
@@ -22,7 +24,6 @@ export default function App() {
         <Stack.Screen name="SignupP4" component={SignupP4} />
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
-  
+    
   );
 }
-
