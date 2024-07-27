@@ -5,16 +5,17 @@ import tw from 'tailwind-react-native-classnames';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types'; // Adjust the path as necessary
 
+
 const backgroundImage = require('../assets/images/bg.jpg');
 const logoImage = require('../assets/images/africa3.png');
 
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Welcome'>;
 
 type Props = {
-  navigation: HomeScreenNavigationProp;
+  navigation: WelcomeScreenNavigationProp;
 };
 
-export default function HomeScreen({ navigation }: Props) {
+export default function WelcomeScreen({ navigation }: Props) {
   return (
     <View style={tw`flex-1`}>
       <ImageBackground 

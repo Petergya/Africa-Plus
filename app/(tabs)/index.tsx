@@ -2,7 +2,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '../../screenComponents/HomeScreen';
+import WelcomeScreen from '../../screenComponents/WelcomeScreen';
 import Login from '../../screenComponents/login/Login'; 
 import Login2 from '../../screenComponents/login/Login2';
 import Login3 from '../../screenComponents/login/Login3';
@@ -13,13 +13,14 @@ import SignupP3 from '../../screenComponents/signup/Signup3';
 import SignupP4 from '../../screenComponents/signup/Signup4';
 import { RootStackParamList } from '../../types'; 
 
+
 const Stack = createStackNavigator<RootStackParamList>();
 
 export default function AppNavigator() {
   return (
     
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Login2" component={Login2} />
         <Stack.Screen name="Login3" component={Login3} />
