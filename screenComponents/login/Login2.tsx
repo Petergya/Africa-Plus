@@ -1,12 +1,10 @@
-
-
 // import React from 'react';
 // import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 // import tw from "tailwind-react-native-classnames";
 // import { StackNavigationProp } from '@react-navigation/stack';
-// import { RootStackParamList } from '../../types'; 
+// import { RootStackParamList } from '../../types';
 
-// 
+//
 
 // type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Login'>;
 
@@ -46,35 +44,29 @@
 //     </View>
 //   );
 // }
-import React, { useState } from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
-import tw from 'tailwind-react-native-classnames';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../types';
+import React, { useState } from "react";
+import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import tw from "tailwind-react-native-classnames";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../types";
 
-const passImage = require('../../assets/images/pass.png');
+const passImage = require("../../assets/images/pass.png");
 
-type Login2NavigationProp = StackNavigationProp<RootStackParamList, 'Login2'>;
+type Login2NavigationProp = StackNavigationProp<RootStackParamList, "Login2">;
 
 type Props = {
   navigation: Login2NavigationProp;
 };
 
 export default function Login2({ navigation }: Props) {
-  const [email, setEmail] = useState<string>(''); // Ensure email is defined
-  const [password, setPassword] = useState<string>('');
+  const [email, setEmail] = useState<string>(""); 
 
   return (
     <View style={tw`flex-1 justify-center items-center p-4`}>
-
-<Image
-         source={passImage}
-         style={tw`h-64 w-full `}
-         resizeMode="contain"
-       />
+      <Image source={passImage} style={tw`h-64 w-full `} resizeMode="contain" />
       <Text style={tw`text-2xl mb-4 text-white`}>Forgot Password</Text>
       <Text style={tw`text-sm mb-2 text-white w-60 text-center`}>
-      Enter the email attached to your account.
+        Enter the email attached to your account.
       </Text>
 
       <TextInput
@@ -85,23 +77,22 @@ export default function Login2({ navigation }: Props) {
         onChangeText={setEmail}
       />
 
-      
-
       <TouchableOpacity
-        style={tw` py-4 px-4 mt-4`}
+        style={tw`py-4 px-4 mt-4`}
         onPress={() => {
-          if (email && password) {
-           
-            navigation.navigate('Login3', { email,  });
+          if (email) {
+            navigation.navigate('Login3', { email }); 
           } else {
-            alert('Please fill out both fields.');
+            alert("Please enter your email.");
           }
         }}
       >
-        <Text style={tw`border-2 py-4 rounded-full border-yellow-500 text-yellow-500 text-center font-semibold px-24 `}>Forgot Password</Text>
+        <Text
+          style={tw`border-2 py-4 rounded-full border-yellow-500 text-yellow-500 text-center font-semibold px-24`}
+        >
+          Forgot Password
+        </Text>
       </TouchableOpacity>
     </View>
   );
 }
-
-

@@ -43,7 +43,7 @@ export default function SignupP3({ navigation }: Props) {
         style={tw`bg-yellow-500 py-4 px-20 rounded-full mt-16`}
         onPress={() => {
           if (email && password) {
-            // Navigate to the next screen with the email and password
+           
             navigation.navigate('SignupP4', { email, password });
           } else {
             alert('Please fill out both fields.');
