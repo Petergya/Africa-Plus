@@ -20,7 +20,7 @@ export default function Signup4({ navigation }: Props) {
         style={tw`h-40 w-56 mb-4`}
         resizeMode="contain"
       />
-      <Text style={tw`text-2xl mb-2 text-white`}>Account Created</Text>
+      <Text style={tw`text-2xl mb-2 font-extrabold text-yellow-500`}>Account Created</Text>
       <Text style={tw`text-sm mb-4 text-white text-center`}>
         Your account has been created successfully.
       </Text>

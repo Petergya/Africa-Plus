@@ -23,7 +23,7 @@ export default function SignupP3({ navigation }: Props) {
       </Text>
 
       <TextInput
-        style={tw`w-full border-b-2 border-gray-300 mb-4 p-2 text-white`}
+        style={tw`w-80 border-b-2 border-gray-300 mb-4 p-2 text-white`}
         placeholder="Email"
         placeholderTextColor="white"
         value={email}
@@ -31,7 +31,7 @@ export default function SignupP3({ navigation }: Props) {
       />
 
       <TextInput
-        style={tw`w-full border-b-2 border-gray-300 mb-4 p-2 mt-10 text-white`}
+        style={tw`w-80 border-b-2 border-gray-300 mb-4 p-2 mt-10 text-white`}
         placeholder="Password"
         placeholderTextColor="white"
         value={password}
