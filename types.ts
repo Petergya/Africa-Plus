@@ -1,8 +1,12 @@
 
 export type RootStackParamList = {
-  Home: undefined;
-  Welcome: undefined;
+  Home: { email: string } | undefined;
   Login: undefined;
+  Signup: undefined;
+  
+  Welcome: undefined;
+ 
+ 
   Login2: undefined;
   Login3: { email: string };
   Login4: {
