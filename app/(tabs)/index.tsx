@@ -23,6 +23,9 @@ export default function AppNavigator() {
     <Stack.Navigator initialRouteName="Welcome">
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignupP1" component={SignupP1} />
+        <Stack.Screen name="Login2" component={Login2} />
+        <Stack.Screen name="Login3" component={Login3} />
+        <Stack.Screen name="Login4" component={Login4} />
         <Stack.Screen name="SignupP2" component={SignupP2} />
         <Stack.Screen name="SignupP3" component={SignupP3} />
         <Stack.Screen name="SignupP4" component={SignupP4} /> 
@@ -40,8 +43,8 @@ export default function AppNavigator() {
       
     //     <Stack.Screen name="Login" component={Login} />
     //     <Stack.Screen name="Login2" component={Login2} />
-    //     <Stack.Screen name="Login3" component={Login3} />
-    //     <Stack.Screen name="Login4" component={Login4} />
+    //     
+    //     
     //     <Stack.Screen name="SignupP1" component={SignupP1} />
     //     <Stack.Screen name="SignupP2" component={SignupP2} />
     //     <Stack.Screen name="SignupP3" component={SignupP3} />

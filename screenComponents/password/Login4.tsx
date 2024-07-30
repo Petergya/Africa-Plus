@@ -57,7 +57,7 @@ export default function Login4({ navigation }: Props) {
       <TouchableOpacity
         style={tw`bg-yellow-500 py-4 px-20 rounded-full`}
         onPress={() => {
-          navigation.navigate('Home'); 
+          navigation.navigate('Login'); 
         }}
       >
         <Text style={tw`text-white font-semibold`}>FINISH</Text>

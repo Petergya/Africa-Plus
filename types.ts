@@ -2,6 +2,7 @@
 export type RootStackParamList = {
   Home: { email: string } | undefined;
   Login: undefined;
+  
   Signup: undefined;
   
   Welcome: undefined;
