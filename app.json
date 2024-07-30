@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/images/africa3.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#ffffff"
       
     },
     "ios": {
