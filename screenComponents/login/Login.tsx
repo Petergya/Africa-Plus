@@ -67,9 +67,4 @@ export default function Login({ navigation }: Props) {
     </View>
   );
 }
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 3a484e020681e153c192c07b7ce7c3ae613843ed

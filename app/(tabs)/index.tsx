@@ -30,9 +30,7 @@ export default function AppNavigator() {
         <Stack.Screen name="SignupP3" component={SignupP3} />
         <Stack.Screen name="SignupP4" component={SignupP4} /> 
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Login2" component={Login2} />
-        <Stack.Screen name="Login3" component={Login3} />
-        <Stack.Screen name="Login4" component={Login4} />
+        
         <Stack.Screen name="Home" component={HomeScreen} />
         {/* Add other screens as needed */}
       </Stack.Navigator>
