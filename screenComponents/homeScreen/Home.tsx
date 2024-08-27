@@ -17,7 +17,7 @@ const HomeScreen: React.FC<Props> = ({ route }) => {
 
   return (
     <View>
-      <Text>Welcome, {email}</Text>
+      <Text>Welcome,</Text>
     </View>
   );
 };
